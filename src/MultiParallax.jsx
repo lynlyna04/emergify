@@ -33,11 +33,11 @@ const MultiParallax = () => {
 
             <div className='overflow-hidden md:mt-[-100px] w-full bg-[#23447c]' >
                 <motion.img
-            initial={{x: 900}}
-            animate={view ? {x:0}:{}}
-            transition={{duration: 3 }}
+            initial={{x: 0}}
+            animate={view ? {x:900}:{}}
+            transition={{duration: 4 }}
             onViewportEnter={()=> setView(true)}
-             src="/eme.png" alt="Ambulance" />
+             src="/g.gif" alt="Ambulance" />
             </div>
             </motion.div>
         </section>
