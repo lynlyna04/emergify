@@ -20,7 +20,7 @@ const Navbar = () => {
     transition={{duration:1}}
     className='lg:flex flex items-center justify-between px-4 lg:px-8 bg-white'>
         <div>
-            <img src="/logo.png" alt="" className=' w-[90px]'/>
+            <img src="/logo.png" alt="" className=' w-[100px]'/>
         </div>
 
         <ul className='md:flex items-center hidden gap-8'>
