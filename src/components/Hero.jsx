@@ -30,15 +30,15 @@ const Hero = () => {
                 initial={{x: 200, opacity: 0}}
                 animate={{x:0, opacity:1}}
                 transition={{ duration:1, delay:0.2}}
-                className='lg:text-xl text-md max-w-[700px] py-2'>Enhancing ambulance response with traffic control and hospital connectivity. Our platform ensures swift navigation and seamless coordination, optimizing emergency care.</motion.p>
+                className='lg:text-xl text-md max-w-[700px] '>Enhancing ambulance response with traffic control and hospital connectivity. Our platform ensures swift navigation and seamless coordination, optimizing emergency care.</motion.p>
             
                 <br /> <br /> 
                 <motion.a 
-                initial={{opacity: 0,}}
-                whileHover={{opacity: 0.7}}
-                animate={{opacity:1}}
+                initial={{opacity: 0, x: 250}}
+                whileHover={{opacity: 0.7,}}
+                animate={{opacity:1,  x:0}}
                 transition={{ duration:1}}
-                href="#" className='mt-8 px-8 py-2 bg-main rounded-[50px] text-white hover:opacity-70 transition-all duration-300'>
+                href="#" className='mt-8 px-8 py-2 bg-main rounded-[50px] text-white  hover:opacity-70 transition-all duration-300'>
                     Get Started
                 </motion.a>
             </div>
