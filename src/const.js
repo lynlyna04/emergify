@@ -25,12 +25,12 @@ const nav = {
     buttons : [
         {
             title: "Sign Up",
-            goTo: "#",
+            goTo: "signup",
             color: ""
         },
         {
             title: "Log in",
-            goTo: "#",
+            goTo: "login",
             color: "",
         }
     ]

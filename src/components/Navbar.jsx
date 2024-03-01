@@ -3,6 +3,7 @@ import { nav } from '../const';
 import { motion } from 'framer-motion';
 import { HiBars3BottomRight, HiBars4 } from "react-icons/hi2";
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ImCross } from "react-icons/im";
 
 const Navbar = () => {
@@ -36,11 +37,11 @@ const Navbar = () => {
         <div className='md:flex gap-4 hidden'>
             {
                 nav.buttons.map((item) => (
-                    <a href={item.goTo} className='hover:opacity-70 transition-all duration-300'>
+                    <Link to={item.goTo} className='hover:opacity-70 transition-all duration-300'>
                         <button className={`md:px-6 md:py-4  px-4 text-sm ${item.color} bg-main rounded-[50px] text-white`}>
                             {item.title}
                         </button>
-                    </a>
+                    </Link>
                 ))
             }
         </div>
@@ -60,11 +61,11 @@ const Navbar = () => {
 
 {
                 nav.buttons.map((item) => (
-                    <a href={item.goTo} className='hover:opacity-70 transition-all duration-300'>
+                    <Link to={item.goTo} className='hover:opacity-70 transition-all duration-300'>
                         <button className={`px-6 py-2 ${item.color} bg-main rounded-[50px] text-white`}>
                             {item.title}
                         </button>
-                    </a>
+                    </Link>
                 ))
             }
                         </ul>
