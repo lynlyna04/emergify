@@ -25,7 +25,7 @@ export const Login = () => {
           <label for="field" className="mb-1 font-medium">Password</label>
           <input type="password" className="h-9 w-full bg-[#f2f2f7] px-3 py-6 text-sm text-[#333333]" placeholder="" required="" />
         </div>
- <br /> <br />
+        <br /> <br />
         <div className='lg:px-32 px-0'>
         <a href="#" className="mr-5 text-center block mx-auto items-center justify-center bg-main px-8 py-4 w-full rounded-[10px] hover:opacity-75 font-semibold text-white transition ">
           <p className=" font-bold">Create your account</p>
