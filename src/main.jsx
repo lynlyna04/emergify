@@ -7,6 +7,7 @@ import { SignUp } from './pages/SignUp.jsx'
 import { Login } from './pages/Login.jsx'
 import Police from './pages/Police.jsx'
 import Ambulance from './pages/Ambulance.jsx'
+import Settings from './pages/Settings.jsx'
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,14 @@ const router = createBrowserRouter([
   {
     path: '/ambulance',
     element: <Ambulance />
+  },
+  {
+    path: '/police/settings',
+    element: <Settings />
+  },
+  {
+    path: '/ambulance/settings',
+    element: <Settings />
   }
 ])
 
