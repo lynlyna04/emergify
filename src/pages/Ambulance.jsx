@@ -1,14 +1,18 @@
 import React from 'react'
 import { IoIosWarning } from "react-icons/io";
-import { FaCheckCircle, FaHome } from "react-icons/fa";
+import { FaCheckCircle, FaHome, FaPlus } from "react-icons/fa";
 import { FaBell } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
 import { CiLogout } from "react-icons/ci";
 import { Link } from 'react-router-dom';
-const Police = () => {
+import { MdDashboardCustomize } from "react-icons/md";
+import { useState } from 'react';
+
+const Ambulance = () => {
+    const [emergency, setEm] = useState(false)
     return (
         <div>
-           <aside class="flex flex-col w-64 h-screen px-4 py-8 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l">
+            <aside class="flex flex-col w-64 fixed px-4 py-8 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l">
     <div className='flex gap-4 items-center'>
     <a href="#">
         <img class="w-[90px]" src="/logo.png" alt="" />
@@ -16,21 +20,17 @@ const Police = () => {
 
     <div class="flex flex-col text-left">
         <h4 class="mx-2 mt-2 font-medium text-gray-800 ">John Doe</h4>
-        <p class="mx-2 mt-1 text-sm font-medium text-gray-600 ">Police</p>
+        <p class="mx-2 mt-1 text-sm font-medium text-gray-600 ">Ambulance</p>
     </div>
     </div>
 
     <div class="flex flex-col justify-between flex-1 mt-6">
         <nav>
-
-            
-
-
             <Link class="flex items-center px-4 py-2 text-gray-700 bg-gray-100 rounded-lg " to="/police">
-                <FaBell className='text-xl' />
+                <MdDashboardCustomize className='text-xl' />
 
 
-                <span class="mx-4 font-medium">Notifications</span>
+                <span class="mx-4 font-medium">Dashboard</span>
             </Link>
 
             <Link class="flex items-center px-4 py-2 mt-5 text-main transition-colors duration-300 transform rounded-lg  hover:bg-gray-100 " to="/">
@@ -50,7 +50,8 @@ const Police = () => {
                 <span class="mx-4 font-medium">Accounts</span>
             </Link>
 
-            <br /><br /><br /><br /><br /> <br /> <br /> <hr />
+
+            <br /><br /><br /><br /><br /> <br /> <br /> <br /> <hr />
 
             <Link class="flex items-center px-4 py-2 mt-5 text-main transition-colors duration-300 transform rounded-lg  hover:bg-gray-100 " to="#">
                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,77 +68,45 @@ const Police = () => {
 
                 <span class="mx-4 font-medium">Log out</span>
             </Link>
-        </nav>
-    </div>
+                </nav>
+            </div>
             </aside>
 
-            <main className='fixed top-[55px] left-[300px] right-[400px] space-y-4'>
-            <h1 className='text-main font-bold text-2xl'>Notifications</h1>
-            <div className='gap-4'>
-                <button className='px-6 py-2 bg-gray-200 rounded-[5px]'>Pending</button>
-                <button className='px-6 py-2  rounded-[5px]'>Done</button>
-            </div>
-
-            <div className='divide-main'>
-                <div className='flex items-center justify-between w-full bg-red-200 py-2 px-6'>
-                    <div className='flex gap-4 items-center '>
-                        <div className=' h-full'>
-                            <IoIosWarning className='text-3xl text-red-900 ' />
-                        </div>
-                        <div className='border-l-2 border-red-400 pl-6'>
-                            <p>Emergency</p>
-                            <p>Location : USTHB</p>
-                            <p>Destination : Beni Mesous</p>
-                        </div>
-
-                        
-                    </div>
-                    <div>
-                        <p>21:38 PM</p>
-                    </div>
+            <main className='absolute top-[55px] left-[300px] right-[400px] space-y-4'>
+                <h1 className='text-main font-bold text-2xl'>Dashboard</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis eaque, possimus eos doloremque qui doloribus!</p>
+                <div>
+                    <button onClick={() => { setEm(true) }} className='px-8 flex items-center gap-4 hover:opacity-70 transition-all duration-300 py-3 bg-red-600 rounded-[5px] text-white'>
+                        <FaPlus />
+                        Call for an emergency
+                    </button>
                 </div>
-                <hr className='border-main' />
-                <div className='flex items-center justify-between w-full  bg-red-200 py-2 px-6'>
-                    <div className='flex gap-4 items-center '>
-                        <div className=' h-full'>
-                            <IoIosWarning className='text-3xl text-red-900 ' />
-                        </div>
-                        <div className='border-l-2 border-red-400 pl-6'>
-                            <p>Emergency</p>
-                            <p>Location : USTHB</p>
-                            <p>Destination : Beni Mesous</p>
-                        </div>
 
+                {
+                    emergency ? <div>
+                    <form action="" className='mt-10'>
+                        <label className='text-main font-semibold'>Current Location</label>
                         
-                    </div>
-                    <div>
-                        <p>21:38 PM</p>
-                    </div>
-                </div>
-                <hr className='border-main' />
-                <div className='flex items-center justify-between w-full bg-red-200 py-2 px-6'>
-                    <div className='flex gap-4 items-center '>
-                        <div className=' h-full'>
-                            <IoIosWarning className='text-3xl text-red-900 ' />
+                        <div className='flex items-center mt-4 '>
+                            <input type="text" name="" id="" className='w-full rounded-l-[10px] py-2 px-4 relative border-solid border-[1px] border-main' />
+                            <button className='bg-main border-[1px] py-2 rounded-r-[10px] border-main w-[20%] text-white'>Auto-Fill</button>
                         </div>
-                        <div className='border-l-2 border-red-400 pl-6'>
-                            <p>Emergency</p>
-                            <p>Location : USTHB</p>
-                            <p>Destination : Beni Mesous</p>
+                        <br /> 
+                        <label className='text-main font-semibold'>Destination</label>
+                        <div className='flex items-center mt-4 '>
+                            <input type="text" name="" id="" className='w-full rounded-[10px] py-2 px-4 relative border-solid border-[1px] border-main' />
                         </div>
-
-                        
-                    </div>
-                    <div>
-                        <p>21:38 PM</p>
-                    </div>
-                </div>
-            </div>
-            
+                        <br />
+                        <label className='text-main font-semibold'>Current Situation of the patient</label> <br /> <br />
+                        <textarea name="" id="" cols="87" rows="5" className='border-main rounded-[10px] border-[1px] border-solid'></textarea>
+                        <input type="submit" value="Send" className='py-2 px-8 cursor-pointer transition-all duration-300 hover:opacity-60 bg-main mt-8 text-white rounded-[5px]'/>
+                    </form>
+                    <br />
+                </div> : <></>
+                }
             </main>
-
         </div>
     )
 }
 
-export default Police
+export default Ambulance

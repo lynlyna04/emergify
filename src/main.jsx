@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { SignUp } from './pages/SignUp.jsx'
 import { Login } from './pages/Login.jsx'
 import Police from './pages/Police.jsx'
+import Ambulance from './pages/Ambulance.jsx'
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: '/police',
     element: <Police />
+  },
+  {
+    path: '/ambulance',
+    element: <Ambulance />
   }
 ])
 
