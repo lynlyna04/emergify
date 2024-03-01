@@ -7,7 +7,7 @@ const Hero = () => {
     const [view, setView] = useState(false);
 
     return (
-        <section id='home' className='lg:flex mb-10 lg:flex-row md:py-10 lg:gap-4 items-center w-full flex-col lg:justify-between px-10 pb-32 py-8 overflow-x-hidden relative  z-20'>
+        <section id='home' className='lg:flex mb-10 lg:flex-row md:py-10 lg:gap-4 items-center w-full flex-col lg:justify-between px-14 pb-32 py-8 overflow-x-hidden relative  z-20'>
             
             <motion.div
             className='w-auto'

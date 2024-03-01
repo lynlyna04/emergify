@@ -4,7 +4,7 @@ import { useState } from 'react';
 const More = () => {
     const [isview, setisView] = useState(false);
     return (
-        <section id='more' className='md:flex px-8 items-center justify-between mt-32'>
+        <section id='more' className='md:flex px-14 items-center justify-between mt-32'>
             <motion.div 
             initial={{x: -200, opacity:0}}
             transition={{duration:0.8}}
