@@ -3,7 +3,7 @@ import { IoIosWarning } from "react-icons/io";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaBell } from "react-icons/fa";
 import { IoMdSettings } from "react-icons/io";
-
+import { CiLogout } from "react-icons/ci";
 
 const Police = () => {
     return (
@@ -30,6 +30,14 @@ const Police = () => {
 
                 <span class="mx-auto font-medium flex justify-center items-center space-x-3 gap-4"><IoMdSettings className='text-2xl' />Settings</span>
             </a>
+
+            <br /> <br /> <br /> 
+            
+            <a class="flex items-center transition-all duration-300 p-4 text-white  bg-red-500 border-2 border-solid rounded-lg " href="#">
+
+                <span class="mx-auto font-medium flex justify-center items-center space-x-3 gap-4"><CiLogout className='text-2xl' />Log out</span>
+            </a>
+           
         </nav>
     </div>
             </aside>
