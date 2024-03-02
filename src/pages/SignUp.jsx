@@ -10,7 +10,7 @@ export const SignUp = () => {
   initial={{y: 200, opacity:0}}
   animate={{y: 0, opacity: 1}}
   transition={{ duration: 1}}
-  className="mx-auto bg-white w-full max-w-7xl px-5 py-4 md:px-4 md:py-4 rounded-[10px] shadow-lg lg:py-6" >
+  className="mx-auto bg-white w-full max-w-5xl px-5 py-4 md:px-4 md:py-4 rounded-[10px] shadow-lg lg:py-6" >
     <div className="">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="text-3xl font-bold md:text-5xl">Sign Up</h2>
