@@ -8,6 +8,7 @@ import { Login } from './pages/Login.jsx'
 import Police from './pages/Police.jsx'
 import Ambulance from './pages/Ambulance.jsx'
 import Settings from './pages/Settings.jsx'
+import Hospital from './pages/Hospital.jsx'
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,14 @@ const router = createBrowserRouter([
   },
   {
     path: '/ambulance/settings',
+    element: <Settings />
+  },
+  {
+    path: '/hospital',
+    element: <Hospital />
+  },
+  {
+    path: '/hospital/settings',
     element: <Settings />
   }
 ])
